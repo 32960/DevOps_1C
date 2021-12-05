@@ -91,7 +91,7 @@
 							<v8:content>Склад</v8:content>
 						</v8:item>
 					</Synonym>
-					<Comment>Складушка</Comment>
+					<Comment/>
 					<Type>
 						<v8:Type>cfg:CatalogRef.Склады</v8:Type>
 					</Type>
