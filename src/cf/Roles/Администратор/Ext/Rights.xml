@@ -1108,6 +1108,14 @@
 			<name>AnalyticsSystemClient</name>
 			<value>true</value>
 		</right>
+		<right>
+			<name>InteractiveOpenExtDataProcessors</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>InteractiveOpenExtReports</name>
+			<value>true</value>
+		</right>
 	</object>
 	<object>
 		<name>ChartOfCalculationTypes.ОсновныеНачисления</name>
