@@ -1077,7 +1077,27 @@
 			<value>true</value>
 		</right>
 		<right>
+			<name>ExclusiveMode</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>ActiveUsers</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>EventLog</name>
+			<value>true</value>
+		</right>
+		<right>
 			<name>ThinClient</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>WebClient</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>MobileClient</name>
 			<value>true</value>
 		</right>
 		<right>
@@ -1085,7 +1105,19 @@
 			<value>true</value>
 		</right>
 		<right>
+			<name>ExternalConnection</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>Automation</name>
+			<value>true</value>
+		</right>
+		<right>
 			<name>TechnicalSpecialistMode</name>
+			<value>true</value>
+		</right>
+		<right>
+			<name>CollaborationSystemInfoBaseRegistration</name>
 			<value>true</value>
 		</right>
 		<right>
