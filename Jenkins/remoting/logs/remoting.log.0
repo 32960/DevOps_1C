@@ -464,3 +464,23 @@ INFO: Failed to connect to the master. Will try again: java.net.ConnectException
 INFO: Failed to connect to the master. Will try again: java.net.ConnectException Connection refused: connect
 дек. 10, 2021 4:32:04 PM org.jenkinsci.remoting.engine.JnlpAgentEndpointResolver waitForReady
 INFO: Failed to connect to the master. Will try again: java.net.ConnectException Connection refused: connect
+дек. 10, 2021 4:32:17 PM org.jenkinsci.remoting.engine.JnlpAgentEndpointResolver waitForReady
+INFO: Failed to connect to the master. Will try again: java.net.ConnectException Connection refused: connect
+дек. 10, 2021 4:32:29 PM org.jenkinsci.remoting.engine.JnlpAgentEndpointResolver waitForReady
+INFO: Failed to connect to the master. Will try again: java.net.ConnectException Connection refused: connect
+дек. 10, 2021 4:32:41 PM org.jenkinsci.remoting.engine.JnlpAgentEndpointResolver waitForReady
+INFO: Failed to connect to the master. Will try again: java.net.ConnectException Connection refused: connect
+дек. 10, 2021 4:32:54 PM org.jenkinsci.remoting.engine.JnlpAgentEndpointResolver waitForReady
+INFO: Failed to connect to the master. Will try again: java.net.ConnectException Connection refused: connect
+дек. 10, 2021 4:33:06 PM org.jenkinsci.remoting.engine.JnlpAgentEndpointResolver waitForReady
+INFO: Failed to connect to the master. Will try again: java.net.ConnectException Connection refused: connect
+дек. 10, 2021 4:33:18 PM org.jenkinsci.remoting.engine.JnlpAgentEndpointResolver waitForReady
+INFO: Failed to connect to the master. Will try again: java.net.ConnectException Connection refused: connect
+дек. 10, 2021 4:33:31 PM org.jenkinsci.remoting.engine.JnlpAgentEndpointResolver waitForReady
+INFO: Failed to connect to the master. Will try again: java.net.ConnectException Connection refused: connect
+дек. 10, 2021 4:33:43 PM org.jenkinsci.remoting.engine.JnlpAgentEndpointResolver waitForReady
+INFO: Failed to connect to the master. Will try again: java.net.ConnectException Connection refused: connect
+дек. 10, 2021 4:33:55 PM org.jenkinsci.remoting.engine.JnlpAgentEndpointResolver waitForReady
+INFO: Failed to connect to the master. Will try again: java.net.ConnectException Connection refused: connect
+дек. 10, 2021 4:34:08 PM org.jenkinsci.remoting.engine.JnlpAgentEndpointResolver waitForReady
+INFO: Failed to connect to the master. Will try again: java.net.ConnectException Connection refused: connect
