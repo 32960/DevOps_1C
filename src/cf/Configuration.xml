@@ -234,6 +234,7 @@
 			<Document>РасходнаяНакладная</Document>
 			<Document>НачислениеЗарплаты</Document>
 			<Document>Операция</Document>
+			<Document>Документ1</Document>
 			<Enum>МетодыСписания</Enum>
 			<Enum>ВидыНоменклатуры</Enum>
 			<Report>ОстаткиТоваровОУ</Report>
