@@ -235,6 +235,7 @@
 			<Document>НачислениеЗарплаты</Document>
 			<Document>Операция</Document>
 			<Document>Документ1</Document>
+			<Document>Документ2</Document>
 			<Enum>МетодыСписания</Enum>
 			<Enum>ВидыНоменклатуры</Enum>
 			<Report>ОстаткиТоваровОУ</Report>
