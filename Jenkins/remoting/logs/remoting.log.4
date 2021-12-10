@@ -1,0 +1,21 @@
+дек. 09, 2021 11:05:37 PM hudson.remoting.jnlp.Main createEngine
+INFO: Setting up agent: OneS
+дек. 09, 2021 11:05:37 PM hudson.remoting.jnlp.Main$CuiListener <init>
+INFO: Jenkins agent is running in headless mode.
+дек. 09, 2021 11:05:37 PM hudson.remoting.Engine startEngine
+INFO: Using Remoting version: 4.11.2
+дек. 09, 2021 11:05:37 PM org.jenkinsci.remoting.engine.WorkDirManager initializeWorkDir
+INFO: Using C:\tools\MyTestRepo\Jenkins\remoting as a remoting work directory
+дек. 09, 2021 11:05:38 PM hudson.remoting.jnlp.Main$CuiListener status
+INFO: Locating server among [http://ovz1.j92464329.m29on.vps.myjino.ru:49537/]
+дек. 09, 2021 11:05:38 PM org.jenkinsci.remoting.engine.JnlpAgentEndpointResolver resolve
+INFO: Remoting server accepts the following protocols: [JNLP4-connect, Ping]
+дек. 09, 2021 11:05:43 PM org.jenkinsci.remoting.engine.JnlpAgentEndpointResolver isPortVisible
+WARNING: connect timed out
+дек. 09, 2021 11:05:43 PM hudson.remoting.jnlp.Main$CuiListener error
+SEVERE: http://ovz1.j92464329.m29on.vps.myjino.ru:49537/ provided port:38931 is not reachable
+java.io.IOException: http://ovz1.j92464329.m29on.vps.myjino.ru:49537/ provided port:38931 is not reachable
+	at org.jenkinsci.remoting.engine.JnlpAgentEndpointResolver.resolve(JnlpAgentEndpointResolver.java:311)
+	at hudson.remoting.Engine.innerRun(Engine.java:724)
+	at hudson.remoting.Engine.run(Engine.java:540)
+

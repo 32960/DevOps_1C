@@ -1,0 +1,2 @@
+chcp 65001
+java -Dfile.encoding=UTF8 -jar agent.jar -jnlpUrl http://ovz1.j92464329.m29on.vps.myjino.ru:49537/computer/OneS/jenkins-agent.jnlp -secret 602f24e3b81348877e1f486175493b32b98ad921969cb9ec12a2f2fe987f5322 -workDir "C:\tools\MyTestRepo\Jenkins"
