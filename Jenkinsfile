@@ -22,14 +22,9 @@ pipeline
         }
     }
     stages {
-        stage("stage") {
+        stage("Создание тестовой базы") {
             steps {
-                bat " echo Сообщение из steps"
-                bat " echo переменная envString = ${envString}"
-
-                script {
-                    scannerHome = tool "sonar-scanner"
-                }
+                bat "chcp 65001\n vrunner init-dev --dt C:\\tools\\dt_vygruzki\\course.dt --db-user Администратор --src src/cf" 
             }
         }
     }
