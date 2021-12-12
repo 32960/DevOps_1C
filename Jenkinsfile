@@ -10,9 +10,10 @@ pipeline
  
     post {
         always {
-            allure includeProperties: false, jdk: '', results: [[path: 'out/syntax-check/allure'], [path: 'out/allure/smoke'], [path: 'out/allure']]
+            allure includeProperties: false, jdk: '', results: [[path: 'out/syntax-check/allure'], [path: 'out/allure/smoke'], [path: 'out/allure'], [path: 'build/tests/allure']]
             junit allowEmptyResults: true, testResults: 'out/syntax-check/junit/junit.xml'
             junit allowEmptyResults: true, testResults: 'out/*.xml'
+            junit allowEmptyResults: true, testResults: 'build/tests/junit/*.xml'
         }
     
         failure {
@@ -26,7 +27,7 @@ pipeline
     stages {
         stage("Создание тестовой базы") {
             steps {
-                bat "chcp 65001\n vrunner init-dev --dt C:\\Train_04_20\\Template\\course.dt --db-user Администратор --src src/cf"
+                bat "chcp 65001\n vrunner init-dev --dt C:\tools\dt_выгрузки\course.dt --db-user Администратор --src src/cf "
  
             }
         }
@@ -52,11 +53,13 @@ pipeline
             }
         }
 
-    stage("vanessa") {
+    stage("Модульные тесты") {
             steps {
                 script{
                     try {
-                        bat "chcp 65001\n runner vanessa"
+                        bat """chcp 65001
+                        call vrunner compileepf tests tests
+                        call runner xunit --settings ./env-tests.json"""
                     } catch(Exception Exc) {
                          currentBuild.result = 'UNSTABLE'
                     }
@@ -65,11 +68,11 @@ pipeline
             }
         }
 
-    stage("АПК") {
+    stage("vanessa") {
             steps {
                 script{
                     try {
-                        bat "chcp 65001\n runner run --ibconnection /FC:/Train_04_20/Template/ACC --db-user \"\" --db-pwd \"\"  --command \"acc.catalog=${WORKSPACE};acc.propertiesPaths=./tools/acc-export/acc.properties;\" --execute \"./tools/acc-export/acc-export.epf\" --ordinaryapp=1"
+                        bat "chcp 65001\n runner vanessa"
                     } catch(Exception Exc) {
                          currentBuild.result = 'UNSTABLE'
                     }
@@ -84,7 +87,7 @@ pipeline
                        scannerHome = tool 'sonar-scanner'
                 }
             withSonarQubeEnv ("sonar") {
-                    bat "${scannerHome}/bin/sonar-scanner -D sonar.login=b398eb45331f9fc123b352b4cf96d320cfeef8cd -D sonar.projectVersion=${BUILD_ID}"
+                    bat "${scannerHome}/bin/sonar-scanner -D sonar.login=a.zoteev -D sonar.projectVersion=${BUILD_ID}"
                 }  
             }
         }
