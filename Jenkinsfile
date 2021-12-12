@@ -23,12 +23,12 @@ pipeline
         }
     }
     stages {
-        stage("Sozdanie testovoy bazy") {
+        stage("Создание тестовой базы") {
             steps {
-                bat "chcp 65001\n vrunner init-dev --dt C:\\tools\\dt_vygruzki\\course.dt --db-user Administrator --src src/cf" 
+                bat "chcp 65001\n vrunner init-dev --dt C:\\tools\\dt_vygruzki\\course.dt --db-user Администратор --src src/cf" 
             }
         }
-        stage("Syntax kontrol") {
+        stage("Syntax control") {
             steps {
                 bat "chcp 65001\n vrunner syntax-check"
  

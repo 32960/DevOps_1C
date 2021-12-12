@@ -29,3 +29,5 @@ INFO: Waiting for ProtocolStack to start.
 INFO: Remote identity confirmed: d1:5b:02:5b:d3:8b:4c:e1:49:58:7c:7a:70:ed:9b:63
 дек. 12, 2021 5:02:04 PM hudson.remoting.jnlp.Main$CuiListener status
 INFO: Connected
+дек. 12, 2021 5:14:24 PM org.jenkinsci.remoting.util.AnonymousClassWarnings warn
+WARNING: Attempt to (de-)serialize anonymous class ru.yandex.qatools.allure.jenkins.utils.BuildUtils$1; see: https://jenkins.io/redirect/serialization-of-anonymous-classes/
