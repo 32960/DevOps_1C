@@ -6,6 +6,9 @@ pipeline
     
     environment {
         envString = 'true'
+        LC_ALL = 'en_US.UTF-8'
+        LANG    = 'en_US.UTF-8'
+        LANGUAGE = 'en_US.UTF-8'
     }
  
     post {
@@ -27,7 +30,7 @@ pipeline
     stages {
         stage("Sozdanie testovoy bazy") {
             steps {
-                bat "chcp 65001\n vrunner init-dev --dt C:\\tools\\dt_vygruzki\\course.dt --db-user Administrator --src src/cf" 
+                bat "chcp 65001\n vrunner init-dev --dt C:\\tools\\dt_vygruzki\\course.dt --db-user Администаратор --src src/cf" 
             }
         }
         stage("Syntax control") {
@@ -60,7 +63,7 @@ pipeline
             }
         }
 
-        stage("Sonar") {
+        stage("Сонар") {
             steps {
                 script{
                        scannerHome = tool 'sonar-scanner'
