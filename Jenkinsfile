@@ -56,6 +56,9 @@ pipeline
                          currentBuild.result = 'UNSTABLE'
                     }
                 }
+            }
+        }
+
         stage("Sonar") {
             steps {
                 script{
@@ -66,10 +69,6 @@ pipeline
                 }  
             }
         }
-
-            }
-        }
-
 
     }
 }
