@@ -13,6 +13,7 @@ pipeline
             allure includeProperties: false, jdk: '', results: [[path: 'out/syntax-check/allure'],[path: 'out/smoke/allure'],[path: 'out/allure']]
             junit allowEmptyResults: true, testResults: 'out/syntax-check/junit/junit.xml'
             junit allowEmptyResults: true, testResults: 'out/**/*.xml'
+            junit allowEmptyResults: true, testResults: 'build/tests/junit/*.xml'
         }
     
         failure {
@@ -35,7 +36,7 @@ pipeline
  
             }
         }
-       stage("Smoke tests") {
+        stage("Smoke tests") {
             steps {
                 script{
                     try {
@@ -69,6 +70,19 @@ pipeline
                 }  
             }
         }
-
+        stage("Modul tests") {
+            steps {
+                script{
+                    try {
+                        bat """chcp 65001
+                        call vrunner compileepf tests tests
+                        call vrunner xunit --settings ./env-tests.json"""
+                    } catch(Exception Exc) {
+                         currentBuild.result = 'UNSTABLE'
+                    }
+                }
+ 
+            }
+        }
     }
 }
