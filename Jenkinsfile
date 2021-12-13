@@ -10,8 +10,9 @@ pipeline
  
     post {
         always {
-            allure includeProperties: false, jdk: '', results: [[path: 'out/syntax-check/allure']]
+            allure includeProperties: false, jdk: '', results: [[path: 'out/syntax-check/allure'], [path: 'out/allure/smoke']]
             junit allowEmptyResults: true, testResults: 'out/syntax-check/junit/junit.xml'
+            junit allowEmptyResults: true, testResults: 'out/*.xml'
         }
     
         failure {
@@ -34,6 +35,19 @@ pipeline
  
             }
         }
+       stage("Smoke tests") {
+            steps {
+                script{
+                    try {
+                        bat "chcp 65001\n runner xunit"
+                    } catch(Exception Exc) {
+                         currentBuild.result = 'UNSTABLE'
+                    }
+                }
+ 
+            }
+        }
+
 
     }
 }
