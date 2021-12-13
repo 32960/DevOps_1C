@@ -65,7 +65,7 @@ pipeline
                        scannerHome = tool 'sonar-scanner'
                 }
             withSonarQubeEnv ("sonar") {
-                    bat "${scannerHome}/bin/sonar-scanner -D sonar.login=a.zoteev -D sonar.projectVersion=${BUILD_ID}"
+                    bat "${scannerHome}/bin/sonar-scanner -D sonar.login=9fb760acae5fb0999ac11d63347f2be4e64faa58 -D sonar.projectVersion=${BUILD_ID}"
                 }  
             }
         }
