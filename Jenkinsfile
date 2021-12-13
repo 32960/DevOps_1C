@@ -10,7 +10,7 @@ pipeline
  
     post {
         always {
-            allure includeProperties: false, jdk: '', results: [[path: 'out/syntax-check/allure'], [path: 'out/smoke/allure'], [path: 'C:\\tools\\MyTestRepo\\J\\workspace\train\\allure-report']]
+            allure includeProperties: false, jdk: '', results: [[path: 'out/syntax-check/allure'],[path: 'out/smoke/allure'],[path: 'out/allure']]
             junit allowEmptyResults: true, testResults: 'out/syntax-check/junit/junit.xml'
             junit allowEmptyResults: true, testResults: 'out/**/*.xml'
         }
@@ -39,7 +39,7 @@ pipeline
             steps {
                 script{
                     try {
-                        bat "chcp 65001\n runner xunit"
+                        bat "chcp 65001\n vrunner xunit"
                     } catch(Exception Exc) {
                          currentBuild.result = 'UNSTABLE'
                     }
@@ -51,7 +51,7 @@ pipeline
             steps {
                 script{
                     try {
-                        bat "chcp 65001\n runner vanessa"
+                        bat "chcp 65001\n vrunner vanessa"
                     } catch(Exception Exc) {
                          currentBuild.result = 'UNSTABLE'
                     }
