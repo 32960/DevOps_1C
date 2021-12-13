@@ -56,7 +56,17 @@ pipeline
                          currentBuild.result = 'UNSTABLE'
                     }
                 }
- 
+        stage("Sonar") {
+            steps {
+                script{
+                       scannerHome = tool 'sonar-scanner'
+                }
+            withSonarQubeEnv ("sonar") {
+                    bat "${scannerHome}/bin/sonar-scanner -D sonar.login=a.zoteev -D sonar.projectVersion=${BUILD_ID}"
+                }  
+            }
+        }
+
             }
         }
 
