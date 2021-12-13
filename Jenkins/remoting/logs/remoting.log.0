@@ -1,0 +1,33 @@
+дек. 13, 2021 12:42:49 PM hudson.remoting.jnlp.Main createEngine
+INFO: Setting up agent: OneS
+дек. 13, 2021 12:42:49 PM hudson.remoting.jnlp.Main$CuiListener <init>
+INFO: Jenkins agent is running in headless mode.
+дек. 13, 2021 12:42:49 PM hudson.remoting.Engine startEngine
+INFO: Using Remoting version: 4.11.2
+дек. 13, 2021 12:42:49 PM org.jenkinsci.remoting.engine.WorkDirManager initializeWorkDir
+INFO: Using C:\tools\MyTestRepo\Jenkins\remoting as a remoting work directory
+дек. 13, 2021 12:42:49 PM hudson.remoting.jnlp.Main$CuiListener status
+INFO: Locating server among [http://ovz1.j92464329.m29on.vps.myjino.ru:49537/]
+дек. 13, 2021 12:42:49 PM org.jenkinsci.remoting.engine.JnlpAgentEndpointResolver resolve
+INFO: Remoting server accepts the following protocols: [JNLP4-connect, Ping]
+дек. 13, 2021 12:42:49 PM org.jenkinsci.remoting.engine.JnlpAgentEndpointResolver resolve
+INFO: Remoting TCP connection tunneling is enabled. Skipping the TCP Agent Listener Port availability check
+дек. 13, 2021 12:42:49 PM hudson.remoting.jnlp.Main$CuiListener status
+INFO: Agent discovery successful
+  Agent address: ovz1.j92464329.m29on.vps.myjino.ru
+  Agent port:    49536
+  Identity:      d1:5b:02:5b:d3:8b:4c:e1:49:58:7c:7a:70:ed:9b:63
+дек. 13, 2021 12:42:49 PM hudson.remoting.jnlp.Main$CuiListener status
+INFO: Handshaking
+дек. 13, 2021 12:42:49 PM hudson.remoting.jnlp.Main$CuiListener status
+INFO: Connecting to ovz1.j92464329.m29on.vps.myjino.ru:49536
+дек. 13, 2021 12:42:49 PM hudson.remoting.jnlp.Main$CuiListener status
+INFO: Trying protocol: JNLP4-connect
+дек. 13, 2021 12:42:49 PM org.jenkinsci.remoting.protocol.impl.BIONetworkLayer$Reader run
+INFO: Waiting for ProtocolStack to start.
+дек. 13, 2021 12:42:50 PM hudson.remoting.jnlp.Main$CuiListener status
+INFO: Remote identity confirmed: d1:5b:02:5b:d3:8b:4c:e1:49:58:7c:7a:70:ed:9b:63
+дек. 13, 2021 12:42:50 PM hudson.remoting.jnlp.Main$CuiListener status
+INFO: Connected
+дек. 13, 2021 12:46:01 PM org.jenkinsci.remoting.util.AnonymousClassWarnings warn
+WARNING: Attempt to (de-)serialize anonymous class ru.yandex.qatools.allure.jenkins.utils.BuildUtils$1; see: https://jenkins.io/redirect/serialization-of-anonymous-classes/
