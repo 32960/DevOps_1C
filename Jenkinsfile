@@ -10,7 +10,7 @@ pipeline
  
     post {
         always {
-            allure includeProperties: false, jdk: '', results: [[path: 'out/syntax-check/allure'], [path: 'out/smoke/allure'], [path: '/out/allure/allure']]
+            allure includeProperties: false, jdk: '', results: [[path: 'out/syntax-check/allure'], [path: 'out/smoke/allure'], [path: '/out/allure']]
             junit allowEmptyResults: true, testResults: 'out/syntax-check/junit/junit.xml'
             junit allowEmptyResults: true, testResults: 'out/*.xml'
         }
@@ -47,7 +47,7 @@ pipeline
  
             }
         }
-    stage("vanessa") {
+        stage("vanessa") {
             steps {
                 script{
                     try {
