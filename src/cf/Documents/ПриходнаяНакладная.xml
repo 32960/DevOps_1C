@@ -180,10 +180,10 @@
 							<Synonym>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>Номенклатура_</v8:content>
+									<v8:content>Номенклатура</v8:content>
 								</v8:item>
 							</Synonym>
-							<Comment>Моделируем ошибку</Comment>
+							<Comment/>
 							<Type>
 								<v8:Type>cfg:CatalogRef.Номенклатура</v8:Type>
 							</Type>

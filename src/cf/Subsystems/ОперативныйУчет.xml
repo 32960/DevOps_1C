@@ -28,7 +28,6 @@
 				<xr:Item xsi:type="xr:MDObjectRef">Enum.МетодыСписания</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Enum.ВидыНоменклатуры</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Номенклатура</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">6f6eaadf-552c-4b6f-bc20-41219f0de7d9</xr:Item>
 			</Content>
 		</Properties>
 		<ChildObjects/>

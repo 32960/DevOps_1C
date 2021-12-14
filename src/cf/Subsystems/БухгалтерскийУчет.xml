@@ -27,7 +27,6 @@
 				<xr:Item xsi:type="xr:MDObjectRef">AccountingRegister.Управленческий</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Номенклатура</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Enum.ВидыНоменклатуры</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">d72d2895-9c9b-4b12-814f-208bc9701b37</xr:Item>
 			</Content>
 		</Properties>
 		<ChildObjects/>
