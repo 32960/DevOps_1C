@@ -30,7 +30,7 @@ pipeline
     stages {
         stage("Sozdanie testovoy bazy") {
             steps {
-                bat "chcp 65001\n vrunner init-dev --dt C:\\tools\\dt_vygruzki\\course.dt --db-user Администаратор --src src/cf" 
+                bat "chcp 65001\n vrunner init-dev --dt C:\\tools\\dt_vygruzki\\course.dt --db-user Administrator --src src/cf" 
             }
         }
         stage("Syntax control") {
@@ -63,7 +63,7 @@ pipeline
             }
         }
 
-        stage("Сонар") {
+        stage("sonar") {
             steps {
                 script{
                        scannerHome = tool 'sonar-scanner'
