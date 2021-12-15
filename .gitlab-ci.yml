@@ -1,5 +1,5 @@
 stages:
-#  - gitsync
+  - gitsync
   - createBase
   - syntax-check
   - xunit
@@ -8,20 +8,20 @@ stages:
   - Sonar
   - Allure
 
-#gitsync:
-#  stage: gitsync
-#  only:
-#    - schedules
-#  tags:
-#    - OneS
-#  script:
-#    - gitsync sync -u Администратор  C:\Users\a.zoteev\Documents\v8storage src\cf
-#    - git push http://Администратор:@http://ovz1.j92464329.m29on.vps.myjino.ru/root/mytestrepo HEAD:main
+gitsync:
+  stage: gitsync
+  only:
+    - schedules
+  tags:
+    - OneS
+  script:
+    - gitsync sync -u Администратор  C:\Users\a.zoteev\Documents\v8storage src\cf
+    - git push http://Администратор:@http://ovz1.j92464329.m29on.vps.myjino.ru/root/mytestrepo HEAD:main
 
 
 Создание тестовой базы:
-#  except:
-#    - schedules
+  except:
+    - schedules
   stage: createBase
   only:
     refs:
@@ -33,8 +33,8 @@ stages:
 
 
 Синтаксический контроль:
-#  except:
-#    - schedules
+  except:
+    - schedules
 
   stage: syntax-check
   variables:
@@ -55,8 +55,8 @@ stages:
 
 
 Дымовые тесты:
-#  except:
-#    - schedules
+  except:
+    - schedules
 
   stage: xunit
   variables:
@@ -76,8 +76,8 @@ stages:
 
 
 vanessa:
-#  except:
-#    - schedules
+  except:
+    - schedules
 
   stage: vanessa
   variables:
@@ -111,8 +111,8 @@ vanessa:
 
 
 Sonar:
-#  except:
-#    - schedules
+  except:
+    - schedules
 
   stage: Sonar
   variables:
@@ -128,8 +128,8 @@ Sonar:
 
 
 Allure:
-#  except:
-#    - schedules
+  except:
+    - schedules
 
   stage: Allure
   variables:
