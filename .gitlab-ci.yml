@@ -16,7 +16,7 @@
    stage: ping2
    only:
      refs:
-       - master
+       - main
    tags:
      - OneS
    script:
