@@ -39,6 +39,7 @@ stages:
   stage: syntax-check
   variables:
     GIT_STRATEGY: none
+  allow_failure: true
   only:
     refs:
       - main
