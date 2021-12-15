@@ -9,7 +9,7 @@ check_interval = 0
   url = "http://ovz1.j92464329.m29on.vps.myjino.ru/"
   token = "u7j5ERs7Et-UFnhtDYsA"
   executor = "shell"
-  shell = "pwsh"
+  shell = "powershell"
   [runners.custom_build_dir]
   [runners.cache]
     [runners.cache.s3]
