@@ -16,7 +16,7 @@ gitsync:
     - OneS
   script:
     - gitsync sync -u Администратор  C:\Users\a.zoteev\Documents\v8storage src\cf
-    - git push http://Администратор:@http://ovz1.j92464329.m29on.vps.myjino.ru/root/mytestrepo HEAD:main
+    - git push http://Администратор:@ovz1.j92464329.m29on.vps.myjino.ru/root/mytestrepo HEAD:main
 
 
 Создание тестовой базы:
