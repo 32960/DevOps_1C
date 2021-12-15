@@ -52,8 +52,6 @@ gitsync:
       junit:
         out/syntax-check/junit/junit.xml
 
-
-
 Дымовые тесты:
   except:
     - schedules
@@ -74,6 +72,28 @@ gitsync:
       junit:
         out/smoke/junit/*.xml
 
+Модульные тесты:
+  except:
+    - schedules
+
+  stage: xunit
+  variables:
+    GIT_STRATEGY: none
+  allow_failure: true
+  only:
+    refs:
+      - main
+  tags:
+    - OneS
+  script:
+    - vrunner compileepf tests tests
+    - vrunner xunit --settings ./env-tests.json
+  artifacts:
+    reports:
+      junit:
+        build/tests/junit/*.xml
+    paths:
+      - build/tests/allure/
 
 vanessa:
   except:
@@ -141,7 +161,7 @@ Allure:
   tags:
     - OneS
   script:
-    - allure generate out/syntax-check/allure out/smoke/allure out/allure -c -o out/allure-result
+    - allure generate out/syntax-check/allure out/smoke/allure out/allure build/tests/allure/ -c -o out/allure-result
   artifacts:
     paths:
       - out/allure-result
