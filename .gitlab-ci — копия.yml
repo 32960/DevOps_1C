@@ -4,9 +4,9 @@ stages:
   - syntax-check
   - xunit
   - vanessa
+#  - ACC
   - Sonar
   - Allure
-
 
 gitsync:
   stage: gitsync
@@ -35,6 +35,7 @@ gitsync:
 Синтаксический контроль:
   except:
     - schedules
+
   stage: syntax-check
   variables:
     GIT_STRATEGY: none
@@ -51,10 +52,10 @@ gitsync:
       junit:
         out/syntax-check/junit/junit.xml
 
-
 Дымовые тесты:
   except:
     - schedules
+
   stage: xunit
   variables:
     GIT_STRATEGY: none
@@ -71,10 +72,10 @@ gitsync:
       junit:
         out/smoke/junit/*.xml
 
-
 Модульные тесты:
   except:
     - schedules
+
   stage: xunit
   variables:
     GIT_STRATEGY: none
@@ -94,10 +95,10 @@ gitsync:
     paths:
       - build/tests/allure/
 
-
 vanessa:
   except:
     - schedules
+
   stage: vanessa
   variables:
     GIT_STRATEGY: none
@@ -111,9 +112,28 @@ vanessa:
     -  runner vanessa
 
 
+
+#АПК:
+#  except:
+#    - schedules
+
+#  stage: ACC
+#  variables:
+#    GIT_STRATEGY: none
+#  allow_failure: true
+#  only:
+#    refs:
+#      - develop
+#  tags:
+#    - OneS
+#  script:
+#    -  runner run --ibconnection /FC:/Train_04_20/Template/ACC --db-user="" --db-pwd=""  --command "acc.catalog=$env:CI_PROJECT_DIR;acc.propertiesPaths=./tools/acc-export/acc.properties;" --execute "./tools/acc-export/acc-export.epf" --ordinaryapp=1#
+
+
 Sonar:
   except:
     - schedules
+
   stage: Sonar
   variables:
     GIT_STRATEGY: none
@@ -130,6 +150,7 @@ Sonar:
 Allure:
   except:
     - schedules
+
   stage: Allure
   variables:
     GIT_STRATEGY: none
@@ -144,3 +165,32 @@ Allure:
   artifacts:
     paths:
       - out/allure-result
+
+
+
+
+
+# stages:
+#   - ping1
+#   - ping2
+
+
+# ping:
+#   stage: ping1
+#   only:
+#     refs:
+#       - develop
+#   tags:
+#     - OneS
+#   script:
+#     - ping 8.8.8.8
+
+# ping2:
+#   stage: ping2
+#   only:
+#     refs:
+#       - master
+#   tags:
+#     - OneS
+#   script:
+#     - ping 8.8.8.8
