@@ -1,6 +1,6 @@
  stages:
-   - ping1
-#   - ping2
+#   - ping1
+   - ping2
 
 # ping:
 #   stage: ping1
