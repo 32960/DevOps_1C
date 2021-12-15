@@ -1,37 +1,37 @@
+# ping:
+#   tags:
+#     - OneS
+#   script:
+#     - ping 8.8.8.8
+#
+# ping2:
+#   tags:
+#     - OneS
+#   script:
+#     - ping 8.8.8.8
+
+
+
+ stages:
+   - ping1
+   - ping2
+
  ping:
+   stage: ping1
+   only:
+     refs:
+       - develop
    tags:
      - OneS
    script:
      - ping 8.8.8.8
 
  ping2:
+   stage: ping2
+   only:
+     refs:
+       - main
    tags:
      - OneS
    script:
      - ping 8.8.8.8
-
-
-
-# stages:
-#   - ping1
-#   - ping2
-
-# ping:
-#   stage: ping1
-#   only:
-#     refs:
-#       - develop
-#   tags:
-#     - OneS
-#   script:
-#     - ping 8.8.8.8
-
-# ping2:
-#   stage: ping2
-#   only:
-#     refs:
-#       - main
-#   tags:
-#     - OneS
-#   script:
-#     - ping 8.8.8.8
